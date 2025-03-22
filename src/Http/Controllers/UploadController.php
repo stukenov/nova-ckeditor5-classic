@@ -1,6 +1,6 @@
 <?php
 
-namespace NumaxLab\NovaCKEditor5Classic\Http\Controllers;
+namespace STukenov\NovaCKEditor5Classic\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -17,7 +17,7 @@ class UploadController extends Controller
     {
         $field = $request->newResource()
             ->availableFields($request)
-            ->findFieldByAttribute($request->field, function () {
+            ->findFieldByAttribute($request->field, function (): void {
                 abort(404);
             });
 
@@ -40,7 +40,7 @@ class UploadController extends Controller
     {
         $field = $request->newResource()
             ->availableFields($request)
-            ->findFieldByAttribute($request->field, function () {
+            ->findFieldByAttribute($request->field, function (): void {
                 abort(404);
             });
 

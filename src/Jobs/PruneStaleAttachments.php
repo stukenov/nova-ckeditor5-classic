@@ -1,8 +1,8 @@
 <?php
 
-namespace NumaxLab\NovaCKEditor5Classic\Jobs;
+namespace STukenov\NovaCKEditor5Classic\Jobs;
 
-use NumaxLab\NovaCKEditor5Classic\Models\PendingAttachment;
+use STukenov\NovaCKEditor5Classic\Models\PendingAttachment;
 
 class PruneStaleAttachments
 {
@@ -15,7 +15,7 @@ class PruneStaleAttachments
     {
         config('ckeditor5Classic.pending_attachment_model')::where('created_at', '<=', now()->subDays(1))
             ->orderBy('id', 'desc')
-            ->chunk(100, function ($attachments) {
+            ->chunk(100, function ($attachments): void {
                 $attachments->each->purge();
             });
     }

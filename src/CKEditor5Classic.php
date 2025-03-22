@@ -1,14 +1,14 @@
 <?php
 
-namespace NumaxLab\NovaCKEditor5Classic;
+namespace STukenov\NovaCKEditor5Classic;
 
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use NumaxLab\NovaCKEditor5Classic\Handlers\DiscardPendingAttachments;
-use NumaxLab\NovaCKEditor5Classic\Handlers\StorePendingAttachment;
-use NumaxLab\NovaCKEditor5Classic\Models\PendingAttachment;
-use NumaxLab\NovaCKEditor5Classic\Models\DeleteAttachments;
-use NumaxLab\NovaCKEditor5Classic\Models\DetachAttachment;
+use STukenov\NovaCKEditor5Classic\Handlers\DiscardPendingAttachments;
+use STukenov\NovaCKEditor5Classic\Handlers\StorePendingAttachment;
+use STukenov\NovaCKEditor5Classic\Models\PendingAttachment;
+use STukenov\NovaCKEditor5Classic\Models\DeleteAttachments;
+use STukenov\NovaCKEditor5Classic\Models\DetachAttachment;
 
 class CKEditor5Classic extends Trix
 {
@@ -80,7 +80,7 @@ class CKEditor5Classic extends Trix
         parent::fillAttribute($request, $requestAttribute, $model, $attribute);
 
         if ($request->{$this->attribute.'DraftId'} && $this->withFiles) {
-            return function () use ($request, $model, $attribute) {
+            return function () use ($request, $model, $attribute): void {
                 config('ckeditor5Classic.pending_attachment_model')::persistDraft(
                     $request->{$this->attribute.'DraftId'},
                     $this,

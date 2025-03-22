@@ -1,6 +1,6 @@
 <?php
 
-namespace NumaxLab\NovaCKEditor5Classic;
+namespace STukenov\NovaCKEditor5Classic;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
@@ -16,11 +16,11 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->booted(function () {
+        $this->app->booted(function (): void {
             $this->routes();
         });
 
-        Nova::serving(function (ServingNova $event) {
+        Nova::serving(function (ServingNova $event): void {
             Nova::script('ckeditor5-classic-field', __DIR__.'/../dist/js/field.js');
             Nova::style('ckeditor5-classic-field', __DIR__.'/../dist/css/field.css');
         });

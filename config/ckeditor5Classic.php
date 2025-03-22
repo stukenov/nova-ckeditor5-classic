@@ -10,8 +10,8 @@ return [
     |
     */
 
-    'attachment_model' => \NumaxLab\NovaCKEditor5Classic\Models\Attachment::class,
-    'pending_attachment_model' => \NumaxLab\NovaCKEditor5Classic\Models\PendingAttachment::class,
+    'attachment_model' => \STukenov\NovaCKEditor5Classic\Models\Attachment::class,
+    'pending_attachment_model' => \STukenov\NovaCKEditor5Classic\Models\PendingAttachment::class,
 
     /*
     |--------------------------------------------------------------------------------

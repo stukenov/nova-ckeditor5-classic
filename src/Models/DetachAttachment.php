@@ -1,6 +1,6 @@
 <?php
 
-namespace  NumaxLab\NovaCKEditor5Classic\Models;
+namespace  STukenov\NovaCKEditor5Classic\Models;
 
 use Illuminate\Http\Request;
 

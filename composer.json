@@ -1,5 +1,5 @@
 {
-    "name": "numaxlab/nova-ckeditor5-classic",
+    "name": "stukenov/nova-ckeditor5-classic",
     "description": "A Laravel Nova CKEditor5 Classic Field.",
     "keywords": [
         "laravel",
@@ -13,13 +13,13 @@
     },
     "autoload": {
         "psr-4": {
-            "NumaxLab\\NovaCKEditor5Classic\\": "src/"
+            "STukenov\\NovaCKEditor5Classic\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NumaxLab\\NovaCKEditor5Classic\\FieldServiceProvider"
+                "STukenov\\NovaCKEditor5Classic\\FieldServiceProvider"
             ]
         }
     },
@@ -27,5 +27,8 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "rector/rector": "^2.0"
+    }
 }
