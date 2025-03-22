@@ -15,7 +15,7 @@
         "laravel-nova": "^1.0"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^12.4.0",
+        "@ckeditor/ckeditor5-build-classic": "^44.3.0",
         "@ckeditor/ckeditor5-vue": "^1.0.0",
         "vue": "^2.5.0"
     }
